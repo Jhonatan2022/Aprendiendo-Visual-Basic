@@ -92,15 +92,8 @@
 
 
         'OPERADORES COMPARATIVOS
-        Dim comparo As Boolean
-
         'Tenemos mayor que >, menor que <,
         'mayor igual >=, menor igual <=, diferente <>
-        comparo = "hola" = "hola"
-        comparo = (2 + 3) < (2 + 4)
-        comparo = 2 = 4
-
-        MsgBox(comparo)
 
     End Sub
 
