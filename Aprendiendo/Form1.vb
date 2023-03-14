@@ -201,4 +201,25 @@
         MsgBox(menori)
     End Sub
 
+    Private Sub primoo_Click(sender As Object, e As EventArgs) Handles primoo.Click
+        'SENTENCIAS IF
+        Dim nume As Integer
+        Dim primono As Boolean = True
+
+        nume = primo.Text
+
+        'Determinamos que ninguno de los numeros sea divisible entre 2 o 3
+        For i As Integer = 2 To nume - 1
+            If nume Mod i = 0 Then
+                primono = False
+            End If
+        Next
+
+        'Dterminamos la siguiente sentencia basandonos en la ecuación anterior para imprimir su resultado
+        If primono = False Then
+            MsgBox("No es un número primo")
+        Else
+            MsgBox("Es un número primo")
+        End If
+    End Sub
 End Class

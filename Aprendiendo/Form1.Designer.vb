@@ -36,6 +36,9 @@ Partial Class Form1
         menorque = New Button()
         mayorigual = New Button()
         menorigual = New Button()
+        primo = New TextBox()
+        Label2 = New Label()
+        primoo = New Button()
         SuspendLayout()
         ' 
         ' texto1
@@ -57,6 +60,7 @@ Partial Class Form1
         nombre.Text = "Nombre Completo"' 
         ' boton
         ' 
+        boton.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         boton.Location = New Point(476, 12)
         boton.Name = "boton"
         boton.Size = New Size(75, 33)
@@ -158,12 +162,39 @@ Partial Class Form1
         menorigual.Text = "Menor igual"
         menorigual.UseVisualStyleBackColor = True
         ' 
+        ' primo
+        ' 
+        primo.Location = New Point(3, 251)
+        primo.Name = "primo"
+        primo.Size = New Size(100, 32)
+        primo.TabIndex = 14
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(3, 228)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(134, 20)
+        Label2.TabIndex = 15
+        Label2.Text = "Ingrese un número"' 
+        ' primoo
+        ' 
+        primoo.Location = New Point(109, 251)
+        primoo.Name = "primoo"
+        primoo.Size = New Size(125, 32)
+        primoo.TabIndex = 16
+        primoo.Text = "Es primo o No"
+        primoo.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.AppWorkspace
         ClientSize = New Size(563, 522)
+        Controls.Add(primoo)
+        Controls.Add(Label2)
+        Controls.Add(primo)
         Controls.Add(menorigual)
         Controls.Add(mayorigual)
         Controls.Add(menorque)
@@ -200,4 +231,7 @@ Partial Class Form1
     Friend WithEvents menorque As Button
     Friend WithEvents mayorigual As Button
     Friend WithEvents menorigual As Button
+    Friend WithEvents primo As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents primoo As Button
 End Class
