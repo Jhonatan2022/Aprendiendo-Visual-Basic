@@ -36,7 +36,6 @@ Partial Class Form1
         menorque = New Button()
         mayorigual = New Button()
         menorigual = New Button()
-        Button1 = New Button()
         SuspendLayout()
         ' 
         ' texto1
@@ -159,22 +158,12 @@ Partial Class Form1
         menorigual.Text = "Menor igual"
         menorigual.UseVisualStyleBackColor = True
         ' 
-        ' Button1
-        ' 
-        Button1.Location = New Point(290, 137)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(75, 23)
-        Button1.TabIndex = 14
-        Button1.Text = "Button1"
-        Button1.UseVisualStyleBackColor = True
-        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.AppWorkspace
         ClientSize = New Size(563, 522)
-        Controls.Add(Button1)
         Controls.Add(menorigual)
         Controls.Add(mayorigual)
         Controls.Add(menorque)
@@ -211,5 +200,4 @@ Partial Class Form1
     Friend WithEvents menorque As Button
     Friend WithEvents mayorigual As Button
     Friend WithEvents menorigual As Button
-    Friend WithEvents Button1 As Button
 End Class

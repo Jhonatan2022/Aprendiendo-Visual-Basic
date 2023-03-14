@@ -3,7 +3,7 @@
     'Para Desomentar Muchas lineas de código Ctrl + K +Ctrl + U
     Private Sub Form1_Load(sender As Object, e As EventArgs)
         'Esto genera un cuadro de error
-        'Msgbox("Hola esto es un error", MsgboxStyle.Critical, "ERROR")
+        'MsgBox("Hola esto es un error", MsgBoxStyle.Critical, "ERROR")
 
         'Esto genera un cuadro de alerta
         'Msgbox("Hola esto es una alerta", MsgboxStyle.Exclamation, "ALERTA")
@@ -95,6 +95,25 @@
         'Tenemos mayor que >, menor que <,
         'mayor igual >=, menor igual <=, diferente <>
 
+        'OPERADORES LÓGICOS
+        'Tenemos And, Or y Not
+        Dim logico As Boolean
+
+        'And solo se cumple cuando los casos son verdaderos
+        logico = (1 = 1) And (2 = 2)
+        MsgBox(logico)
+
+        'Or solo nesesita una afirmación verdadera para convertirse en verdadero
+        logico = (1 = 1) Or (2 = 2)
+        MsgBox(logico)
+
+        'Not se encarga de negar la afirmación
+        logico = Not (1 = 1)
+        MsgBox(logico)
+
+        logico = ((1 = 1) And (2 = 2)) Or (3 <> 2)
+        MsgBox(logico)
+
     End Sub
 
     Private Sub nombre_TextChanged(sender As Object, e As EventArgs)
@@ -181,4 +200,5 @@
         menori = numero1.Text <= numero2.Text
         MsgBox(menori)
     End Sub
+
 End Class
