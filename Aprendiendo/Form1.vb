@@ -1,4 +1,5 @@
-﻿Imports System.Security.Cryptography
+﻿Imports System.DirectoryServices
+Imports System.Security.Cryptography
 
 Public Class Form1
     'Para Comentar Muchas lineas de código Ctrl + K +Ctrl + C
@@ -116,15 +117,49 @@ Public Class Form1
         logico = ((1 = 1) And (2 = 2)) Or (3 <> 2)
         MsgBox(logico)
 
+        'CICLO FOR
+        'Declaramos el incrementador del ciclo
+        'Definimos entre parentesis las posiciocnes que tendra la variable
+        Dim ciclo(5)
+        Dim i As Integer
+        Dim anidado As Integer
+
+        'Sintaxis básica del ciclo for
+
+        For i = 0 To 4
+            ciclo(i) = i + i
+            MsgBox("Posición ( " + i.ToString + " ) = " + ciclo(i).ToString)
+        Next
+
+        'Ciclo for anidado
+        'Por cada ciclo externo se ejecutara in ciclo interno
+        For i = 0 To 2
+            MsgBox("Ciclo externo  i = " + i.ToString)
+            For anidado = 0 To 3
+                MsgBox("Ciclo interno anidado = " + anidado.ToString)
+            Next
+        Next
+
+        'CICLOS DO - WHILE
+        Dim doo As Integer = 0
+
+        Do
+            MsgBox("Ciclo Do: " + i.ToString)
+            'Creamos la incrementación en ña variable i
+
+            i += 1
+
+            'Determinamos que el ciclo se ejecute hasta que i sea menor que 2
+        Loop While i < 2
+
     End Sub
 
     Private Sub nombre_TextChanged(sender As Object, e As EventArgs)
 
         'Modificando formulario por medio de código
         nombre.Text = "Nuevo texto"
-        nombre.TextAlign = HorizontalAlignment.Right
         'Haciendo que el cuadro no sea modificable
-        nombre.ReadOnly = True
+        nombre.ReadOnly = False
     End Sub
 
     Private Sub boton_Click(sender As Object, e As EventArgs)
@@ -274,5 +309,109 @@ Public Class Form1
         For i = 1 To 10
             MsgBox(multiplica & " * " & i & " = " & multiplica * i & vbCrLf)
         Next
+    End Sub
+
+    Private Sub mayorif_Click(sender As Object, e As EventArgs) Handles mayorif.Click
+
+        'Definimos las variables
+        Dim num1, num2 As Integer
+
+        'Asignamos a las variables la propiedasd de los cuadros de texto
+        num1 = numero1.Text
+        num2 = numero2.Text
+
+        'Determinamos si el número 1 es menor que el número 2
+        If (num1 < num2) Then
+            MsgBox("El " & num1 & " es menor que: " & num2)
+
+        ElseIf (num1 = num2) Then
+            MsgBox("El " & num1 & " es igual que: " & num2)
+
+        Else
+            MsgBox("El " & num1 & " es mayor que: " & num2)
+
+        End If
+    End Sub
+
+    Private Sub palabra_Click(sender As Object, e As EventArgs) Handles palabra.Click
+
+        'Comprobando su un campo tiene la palabra
+        If (nombre.Text.Contains("juan")) Then
+            MsgBox("En efecto, ´sí es Juan", MsgBoxStyle.Information, "Este hombnre es juan")
+        Else
+            MsgBox("Lo siento, no eres Juan", MsgBoxStyle.Critical, "No es Juan :'(")
+        End If
+
+    End Sub
+
+    Private Sub multiple_Click(sender As Object, e As EventArgs) Handles multiple.Click
+
+        'Programando eventos de un RadioButton
+        'Definimos la variables
+        Dim num1, num2 As Integer
+        'Definimos resultado como double para tener los resultados tando de división como de resta
+        Dim resulta As Double
+
+        'Capturamos los numeros en la variables
+        num1 = nume1.Text
+        num2 = nume2.Text
+
+        'Determinamos que rediobutton esta seleccionado
+        If (resta.Checked = True) Then
+            resulta = num1 + num2
+
+        ElseIf (dividir.Checked = True) Then
+            resulta = num1 / num2
+        End If
+
+        MsgBox("El resultado de la operación es: " & resulta)
+
+    End Sub
+
+    Private Sub Form1_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'Determinando que radiobutton este chequeado al principio 
+        dividir.Checked = True
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        'Programando los eventos de un checkbox
+        Dim azul, rojo, verde As Boolean
+
+        If Me.azul.Checked = True Then
+            azul = True
+        Else
+            azul = False
+        End If
+
+        If Me.rojo.Checked = True Then
+            rojo = True
+        Else
+            rojo = False
+        End If
+
+        If Me.verde.Checked = True Then
+            verde = True
+        Else
+            verde = False
+        End If
+
+        MsgBox("Opciones seleccionadas: ")
+
+        If azul = True Then
+            MsgBox("AZUL")
+        End If
+
+
+        If rojo = True Then
+            MsgBox("ROJO")
+        End If
+
+
+        If verde = True Then
+            MsgBox("VERDE")
+        End If
+
     End Sub
 End Class

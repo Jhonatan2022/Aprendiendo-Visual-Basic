@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Form1))
         texto1 = New Label()
         nombre = New TextBox()
         boton = New Button()
@@ -43,6 +44,20 @@ Partial Class Form1
         mes = New TextBox()
         fecha = New Button()
         tabla = New Button()
+        mayorif = New Button()
+        palabra = New Button()
+        GroupBox1 = New GroupBox()
+        multiple = New Button()
+        nume2 = New TextBox()
+        nume1 = New TextBox()
+        dividir = New RadioButton()
+        resta = New RadioButton()
+        Label3 = New Label()
+        azul = New CheckBox()
+        rojo = New CheckBox()
+        Button1 = New Button()
+        verde = New CheckBox()
+        GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
         ' texto1
@@ -59,7 +74,7 @@ Partial Class Form1
         nombre.Location = New Point(147, 13)
         nombre.Margin = New Padding(4)
         nombre.Name = "nombre"
-        nombre.Size = New Size(328, 32)
+        nombre.Size = New Size(250, 32)
         nombre.TabIndex = 1
         nombre.Text = "Nombre Completo"' 
         ' boton
@@ -222,12 +237,146 @@ Partial Class Form1
         tabla.Text = "Tabla de multiplicar"
         tabla.UseVisualStyleBackColor = True
         ' 
+        ' mayorif
+        ' 
+        mayorif.Location = New Point(196, 127)
+        mayorif.Name = "mayorif"
+        mayorif.Size = New Size(237, 28)
+        mayorif.TabIndex = 21
+        mayorif.Text = "Determinar si es mayor o igual"
+        mayorif.UseVisualStyleBackColor = True
+        ' 
+        ' palabra
+        ' 
+        palabra.Location = New Point(403, 13)
+        palabra.Name = "palabra"
+        palabra.Size = New Size(67, 32)
+        palabra.TabIndex = 22
+        palabra.Text = "Palabra"
+        palabra.UseVisualStyleBackColor = True
+        ' 
+        ' GroupBox1
+        ' 
+        GroupBox1.BackColor = SystemColors.InactiveCaption
+        GroupBox1.Controls.Add(multiple)
+        GroupBox1.Controls.Add(nume2)
+        GroupBox1.Controls.Add(nume1)
+        GroupBox1.Controls.Add(dividir)
+        GroupBox1.Controls.Add(resta)
+        GroupBox1.ForeColor = SystemColors.ActiveCaptionText
+        GroupBox1.Location = New Point(3, 327)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(247, 81)
+        GroupBox1.TabIndex = 23
+        GroupBox1.TabStop = False
+        GroupBox1.Text = "Seleccione una opción"' 
+        ' multiple
+        ' 
+        multiple.Location = New Point(164, 31)
+        multiple.Name = "multiple"
+        multiple.Size = New Size(75, 32)
+        multiple.TabIndex = 4
+        multiple.Text = "Calcular"
+        multiple.UseVisualStyleBackColor = True
+        ' 
+        ' nume2
+        ' 
+        nume2.Location = New Point(126, 31)
+        nume2.Name = "nume2"
+        nume2.Size = New Size(32, 32)
+        nume2.TabIndex = 3
+        ' 
+        ' nume1
+        ' 
+        nume1.Location = New Point(83, 31)
+        nume1.Name = "nume1"
+        nume1.Size = New Size(37, 32)
+        nume1.TabIndex = 2
+        ' 
+        ' dividir
+        ' 
+        dividir.AutoSize = True
+        dividir.Location = New Point(6, 53)
+        dividir.Name = "dividir"
+        dividir.Size = New Size(70, 24)
+        dividir.TabIndex = 1
+        dividir.TabStop = True
+        dividir.Text = "Dividir"
+        dividir.UseVisualStyleBackColor = True
+        ' 
+        ' resta
+        ' 
+        resta.AutoSize = True
+        resta.Location = New Point(6, 23)
+        resta.Name = "resta"
+        resta.Size = New Size(71, 24)
+        resta.TabIndex = 0
+        resta.TabStop = True
+        resta.Text = "Restar"
+        resta.UseVisualStyleBackColor = True
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(265, 327)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(170, 20)
+        Label3.TabIndex = 24
+        Label3.Text = "Qué colores le gustan ?"' 
+        ' azul
+        ' 
+        azul.AutoSize = True
+        azul.Location = New Point(265, 351)
+        azul.Name = "azul"
+        azul.Size = New Size(58, 24)
+        azul.TabIndex = 25
+        azul.Text = "Azul"
+        azul.UseVisualStyleBackColor = True
+        ' 
+        ' rojo
+        ' 
+        rojo.AutoSize = True
+        rojo.Location = New Point(265, 381)
+        rojo.Name = "rojo"
+        rojo.Size = New Size(58, 24)
+        rojo.TabIndex = 26
+        rojo.Text = "Rojo"
+        rojo.UseVisualStyleBackColor = True
+        ' 
+        ' Button1
+        ' 
+        Button1.Location = New Point(403, 358)
+        Button1.Name = "Button1"
+        Button1.Size = New Size(60, 34)
+        Button1.TabIndex = 27
+        Button1.Text = "Enviar"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' verde
+        ' 
+        verde.AutoSize = True
+        verde.Location = New Point(329, 350)
+        verde.Name = "verde"
+        verde.Size = New Size(66, 24)
+        verde.TabIndex = 28
+        verde.Text = "Verde"
+        verde.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        BackColor = SystemColors.AppWorkspace
-        ClientSize = New Size(563, 522)
+        BackColor = SystemColors.ControlDark
+        BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
+        ClientSize = New Size(625, 522)
+        Controls.Add(verde)
+        Controls.Add(Button1)
+        Controls.Add(rojo)
+        Controls.Add(azul)
+        Controls.Add(Label3)
+        Controls.Add(GroupBox1)
+        Controls.Add(palabra)
+        Controls.Add(mayorif)
         Controls.Add(tabla)
         Controls.Add(fecha)
         Controls.Add(mes)
@@ -252,7 +401,10 @@ Partial Class Form1
         Font = New Font("MV Boli", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
         Margin = New Padding(4)
         Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Form1"
+        GroupBox1.ResumeLayout(False)
+        GroupBox1.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -278,4 +430,17 @@ Partial Class Form1
     Friend WithEvents mes As TextBox
     Friend WithEvents fecha As Button
     Friend WithEvents tabla As Button
+    Friend WithEvents mayorif As Button
+    Friend WithEvents palabra As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents nume2 As TextBox
+    Friend WithEvents nume1 As TextBox
+    Friend WithEvents dividir As RadioButton
+    Friend WithEvents resta As RadioButton
+    Friend WithEvents multiple As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents azul As CheckBox
+    Friend WithEvents rojo As CheckBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents verde As CheckBox
 End Class

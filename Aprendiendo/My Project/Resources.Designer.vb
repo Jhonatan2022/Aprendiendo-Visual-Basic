@@ -59,5 +59,36 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property _336151553_770778021023435_1060550977591754097_n() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("336151553_770778021023435_1060550977591754097_n", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property kisspng_dipper_pines_mabel_pines_bill_cipher_cat_wendy_5cb155f4e8f7f7_3972237415551257489542() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("kisspng-dipper-pines-mabel-pines-bill-cipher-cat-wendy-5cb155f4e8f7f7.39722374155"& _ 
+                        "51257489542", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property kisspng_dipper_pines_mabel_pines_bill_cipher_cat_wendy_5cb155f4e8f7f71() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("kisspng-dipper-pines-mabel-pines-bill-cipher-cat-wendy-5cb155f4e8f7f71", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
     End Module
 End Namespace
