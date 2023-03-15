@@ -184,12 +184,12 @@ Public Class Form1
 
     End Sub
 
-    Private Sub cierro_Click(sender As Object, e As EventArgs) Handles cierro.Click
+    Private Sub cierro_Click(sender As Object, e As EventArgs)
         'Este comando permitira cerrar la ventana al ser oprimido
         Me.Close()
     End Sub
 
-    Private Sub igual_Click(sender As Object, e As EventArgs) Handles igual.Click
+    Private Sub igual_Click(sender As Object, e As EventArgs)
 
         Dim igual As Boolean
 
@@ -198,7 +198,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub diferente_Click(sender As Object, e As EventArgs) Handles diferente.Click
+    Private Sub diferente_Click(sender As Object, e As EventArgs)
 
         Dim diferent As Boolean
 
@@ -206,7 +206,7 @@ Public Class Form1
         MsgBox(diferent)
     End Sub
 
-    Private Sub mayorque_Click(sender As Object, e As EventArgs) Handles mayorque.Click
+    Private Sub mayorque_Click(sender As Object, e As EventArgs)
 
         Dim mayor As Boolean
         'El numero 1 es mayor que el 2
@@ -214,7 +214,7 @@ Public Class Form1
         MsgBox(mayor)
     End Sub
 
-    Private Sub menorque_Click(sender As Object, e As EventArgs) Handles menorque.Click
+    Private Sub menorque_Click(sender As Object, e As EventArgs)
 
         Dim menor As Boolean
 
@@ -222,7 +222,7 @@ Public Class Form1
         MsgBox(menor)
     End Sub
 
-    Private Sub mayorigual_Click(sender As Object, e As EventArgs) Handles mayorigual.Click
+    Private Sub mayorigual_Click(sender As Object, e As EventArgs)
 
         Dim mayori As Boolean
 
@@ -230,7 +230,7 @@ Public Class Form1
         MsgBox(mayori)
     End Sub
 
-    Private Sub menorigual_Click(sender As Object, e As EventArgs) Handles menorigual.Click
+    Private Sub menorigual_Click(sender As Object, e As EventArgs)
 
         Dim menori As Boolean
 
@@ -238,7 +238,7 @@ Public Class Form1
         MsgBox(menori)
     End Sub
 
-    Private Sub primoo_Click(sender As Object, e As EventArgs) Handles primoo.Click
+    Private Sub primoo_Click(sender As Object, e As EventArgs)
         'SENTENCIAS IF
         Dim nume As Integer
         Dim primono As Boolean = True
@@ -260,7 +260,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub fecha_Click(sender As Object, e As EventArgs) Handles fecha.Click
+    Private Sub fecha_Click(sender As Object, e As EventArgs)
 
         Dim Ndia, Nmes, DDA As Integer
         Ndia = dia.Text
@@ -299,7 +299,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub tabla_Click(sender As Object, e As EventArgs) Handles tabla.Click
+    Private Sub tabla_Click(sender As Object, e As EventArgs)
 
         Dim multiplica As Integer
 
@@ -311,7 +311,7 @@ Public Class Form1
         Next
     End Sub
 
-    Private Sub mayorif_Click(sender As Object, e As EventArgs) Handles mayorif.Click
+    Private Sub mayorif_Click(sender As Object, e As EventArgs)
 
         'Definimos las variables
         Dim num1, num2 As Integer
@@ -333,7 +333,7 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub palabra_Click(sender As Object, e As EventArgs) Handles palabra.Click
+    Private Sub palabra_Click(sender As Object, e As EventArgs)
 
         'Comprobando su un campo tiene la palabra
         If (nombre.Text.Contains("juan")) Then
@@ -344,7 +344,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub multiple_Click(sender As Object, e As EventArgs) Handles multiple.Click
+    Private Sub multiple_Click(sender As Object, e As EventArgs)
 
         'Programando eventos de un RadioButton
         'Definimos la variables
@@ -368,13 +368,13 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Form1_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load_1(sender As Object, e As EventArgs)
 
         'Determinando que radiobutton este chequeado al principio 
         dividir.Checked = True
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
         'Programando los eventos de un checkbox
         Dim azul, rojo, verde As Boolean
@@ -412,6 +412,28 @@ Public Class Form1
         If verde = True Then
             MsgBox("VERDE")
         End If
+
+    End Sub
+
+    Private Sub fibonacci_Click(sender As Object, e As EventArgs) Handles fibonacci.Click
+
+        'Serie de fibonacci
+        Dim n1, n2, n3, i As Single
+
+        'Asignamos los valores a las variables
+        n1 = 1
+        n2 = 1
+        n3 = 0
+
+        'Definimos el ciclo for hasta que cantidad queremos que vaya
+        For i = 1 To 12
+            n3 = n1 + n2
+            'Agregamos a la lista los valores obtenidos de la ecuación
+            ListBox1.Items.Add("Posición " & i & " en Fibonacci es: " & n1)
+            n1 = n2
+            n2 = n3
+        Next
+
 
     End Sub
 End Class

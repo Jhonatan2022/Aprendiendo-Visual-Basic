@@ -57,12 +57,16 @@ Partial Class Form1
         rojo = New CheckBox()
         Button1 = New Button()
         verde = New CheckBox()
+        fibonacci = New Button()
+        ListBox1 = New ListBox()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
         ' texto1
         ' 
         texto1.AutoSize = True
+        texto1.BackColor = Color.Transparent
+        texto1.ForeColor = SystemColors.ControlLightLight
         texto1.Location = New Point(3, 16)
         texto1.Margin = New Padding(4, 0, 4, 0)
         texto1.Name = "texto1"
@@ -79,7 +83,6 @@ Partial Class Form1
         nombre.Text = "Nombre Completo"' 
         ' boton
         ' 
-        boton.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         boton.Location = New Point(476, 12)
         boton.Name = "boton"
         boton.Size = New Size(75, 33)
@@ -89,6 +92,7 @@ Partial Class Form1
         ' 
         ' numero1
         ' 
+        numero1.BackColor = SystemColors.ButtonHighlight
         numero1.Location = New Point(3, 89)
         numero1.Name = "numero1"
         numero1.Size = New Size(100, 32)
@@ -96,6 +100,7 @@ Partial Class Form1
         ' 
         ' numero2
         ' 
+        numero2.BackColor = SystemColors.ButtonHighlight
         numero2.Location = New Point(109, 89)
         numero2.Name = "numero2"
         numero2.Size = New Size(100, 32)
@@ -103,16 +108,19 @@ Partial Class Form1
         ' 
         ' sumar
         ' 
+        sumar.BackColor = SystemColors.ButtonHighlight
         sumar.Location = New Point(215, 89)
         sumar.Name = "sumar"
         sumar.Size = New Size(75, 32)
         sumar.TabIndex = 5
         sumar.Text = "Sumar"
-        sumar.UseVisualStyleBackColor = True
+        sumar.UseVisualStyleBackColor = False
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
+        Label1.BackColor = Color.Transparent
+        Label1.ForeColor = SystemColors.ControlLightLight
         Label1.Location = New Point(3, 66)
         Label1.Name = "Label1"
         Label1.Size = New Size(231, 20)
@@ -120,69 +128,77 @@ Partial Class Form1
         Label1.Text = "Digíte un número en cada casilla"' 
         ' cierro
         ' 
+        cierro.BackColor = SystemColors.ButtonHighlight
         cierro.Location = New Point(296, 89)
         cierro.Name = "cierro"
         cierro.Size = New Size(75, 32)
         cierro.TabIndex = 7
         cierro.Text = "Cerrar"
-        cierro.UseVisualStyleBackColor = True
+        cierro.UseVisualStyleBackColor = False
         ' 
         ' igual
         ' 
+        igual.BackColor = SystemColors.ButtonHighlight
         igual.Location = New Point(3, 127)
         igual.Name = "igual"
         igual.Size = New Size(75, 28)
         igual.TabIndex = 8
         igual.Text = "Igual"
-        igual.UseVisualStyleBackColor = True
+        igual.UseVisualStyleBackColor = False
         ' 
         ' diferente
         ' 
+        diferente.BackColor = SystemColors.ButtonHighlight
         diferente.Location = New Point(109, 127)
         diferente.Name = "diferente"
         diferente.Size = New Size(81, 28)
         diferente.TabIndex = 9
         diferente.Text = "Diferente"
-        diferente.UseVisualStyleBackColor = True
+        diferente.UseVisualStyleBackColor = False
         ' 
         ' mayorque
         ' 
+        mayorque.BackColor = SystemColors.ButtonHighlight
         mayorque.Location = New Point(3, 161)
         mayorque.Name = "mayorque"
         mayorque.Size = New Size(93, 29)
         mayorque.TabIndex = 10
         mayorque.Text = "Mayor que"
-        mayorque.UseVisualStyleBackColor = True
+        mayorque.UseVisualStyleBackColor = False
         ' 
         ' menorque
         ' 
+        menorque.BackColor = SystemColors.ButtonHighlight
         menorque.Location = New Point(109, 161)
         menorque.Name = "menorque"
         menorque.Size = New Size(90, 29)
         menorque.TabIndex = 11
         menorque.Text = "Menor que"
-        menorque.UseVisualStyleBackColor = True
+        menorque.UseVisualStyleBackColor = False
         ' 
         ' mayorigual
         ' 
+        mayorigual.BackColor = SystemColors.ButtonHighlight
         mayorigual.Location = New Point(3, 196)
         mayorigual.Name = "mayorigual"
         mayorigual.Size = New Size(100, 29)
         mayorigual.TabIndex = 12
         mayorigual.Text = "Mayor igual"
-        mayorigual.UseVisualStyleBackColor = True
+        mayorigual.UseVisualStyleBackColor = False
         ' 
         ' menorigual
         ' 
+        menorigual.BackColor = SystemColors.ButtonHighlight
         menorigual.Location = New Point(109, 196)
         menorigual.Name = "menorigual"
         menorigual.Size = New Size(100, 29)
         menorigual.TabIndex = 13
         menorigual.Text = "Menor igual"
-        menorigual.UseVisualStyleBackColor = True
+        menorigual.UseVisualStyleBackColor = False
         ' 
         ' primo
         ' 
+        primo.BackColor = SystemColors.ButtonHighlight
         primo.Location = New Point(3, 251)
         primo.Name = "primo"
         primo.Size = New Size(100, 32)
@@ -191,6 +207,7 @@ Partial Class Form1
         ' Label2
         ' 
         Label2.AutoSize = True
+        Label2.BackColor = SystemColors.ButtonHighlight
         Label2.Location = New Point(3, 228)
         Label2.Name = "Label2"
         Label2.Size = New Size(134, 20)
@@ -198,15 +215,17 @@ Partial Class Form1
         Label2.Text = "Ingrese un número"' 
         ' primoo
         ' 
+        primoo.BackColor = SystemColors.ButtonHighlight
         primoo.Location = New Point(109, 251)
         primoo.Name = "primoo"
         primoo.Size = New Size(125, 32)
         primoo.TabIndex = 16
         primoo.Text = "Es primo o No"
-        primoo.UseVisualStyleBackColor = True
+        primoo.UseVisualStyleBackColor = False
         ' 
         ' dia
         ' 
+        dia.BackColor = SystemColors.ButtonHighlight
         dia.Location = New Point(3, 289)
         dia.Name = "dia"
         dia.Size = New Size(100, 32)
@@ -214,6 +233,7 @@ Partial Class Form1
         dia.Text = "Escribe el día"' 
         ' mes
         ' 
+        mes.BackColor = SystemColors.ButtonHighlight
         mes.Location = New Point(109, 289)
         mes.Name = "mes"
         mes.Size = New Size(111, 32)
@@ -221,30 +241,33 @@ Partial Class Form1
         mes.Text = "Escribe el mes"' 
         ' fecha
         ' 
+        fecha.BackColor = SystemColors.ButtonHighlight
         fecha.Location = New Point(226, 289)
         fecha.Name = "fecha"
         fecha.Size = New Size(75, 32)
         fecha.TabIndex = 19
         fecha.Text = "Calcular"
-        fecha.UseVisualStyleBackColor = True
+        fecha.UseVisualStyleBackColor = False
         ' 
         ' tabla
         ' 
+        tabla.BackColor = SystemColors.ButtonHighlight
         tabla.Location = New Point(240, 251)
         tabla.Name = "tabla"
         tabla.Size = New Size(157, 32)
         tabla.TabIndex = 20
         tabla.Text = "Tabla de multiplicar"
-        tabla.UseVisualStyleBackColor = True
+        tabla.UseVisualStyleBackColor = False
         ' 
         ' mayorif
         ' 
+        mayorif.BackColor = SystemColors.ButtonHighlight
         mayorif.Location = New Point(196, 127)
         mayorif.Name = "mayorif"
         mayorif.Size = New Size(237, 28)
         mayorif.TabIndex = 21
         mayorif.Text = "Determinar si es mayor o igual"
-        mayorif.UseVisualStyleBackColor = True
+        mayorif.UseVisualStyleBackColor = False
         ' 
         ' palabra
         ' 
@@ -257,7 +280,7 @@ Partial Class Form1
         ' 
         ' GroupBox1
         ' 
-        GroupBox1.BackColor = SystemColors.InactiveCaption
+        GroupBox1.BackColor = SystemColors.ButtonHighlight
         GroupBox1.Controls.Add(multiple)
         GroupBox1.Controls.Add(nume2)
         GroupBox1.Controls.Add(nume1)
@@ -318,6 +341,7 @@ Partial Class Form1
         ' Label3
         ' 
         Label3.AutoSize = True
+        Label3.BackColor = SystemColors.ButtonHighlight
         Label3.Location = New Point(265, 327)
         Label3.Name = "Label3"
         Label3.Size = New Size(170, 20)
@@ -326,41 +350,63 @@ Partial Class Form1
         ' azul
         ' 
         azul.AutoSize = True
+        azul.BackColor = SystemColors.ButtonHighlight
         azul.Location = New Point(265, 351)
         azul.Name = "azul"
         azul.Size = New Size(58, 24)
         azul.TabIndex = 25
         azul.Text = "Azul"
-        azul.UseVisualStyleBackColor = True
+        azul.UseVisualStyleBackColor = False
         ' 
         ' rojo
         ' 
         rojo.AutoSize = True
+        rojo.BackColor = SystemColors.ButtonHighlight
         rojo.Location = New Point(265, 381)
         rojo.Name = "rojo"
         rojo.Size = New Size(58, 24)
         rojo.TabIndex = 26
         rojo.Text = "Rojo"
-        rojo.UseVisualStyleBackColor = True
+        rojo.UseVisualStyleBackColor = False
         ' 
         ' Button1
         ' 
+        Button1.BackColor = SystemColors.ButtonHighlight
         Button1.Location = New Point(403, 358)
         Button1.Name = "Button1"
         Button1.Size = New Size(60, 34)
         Button1.TabIndex = 27
         Button1.Text = "Enviar"
-        Button1.UseVisualStyleBackColor = True
+        Button1.UseVisualStyleBackColor = False
         ' 
         ' verde
         ' 
         verde.AutoSize = True
+        verde.BackColor = SystemColors.ButtonHighlight
         verde.Location = New Point(329, 350)
         verde.Name = "verde"
         verde.Size = New Size(66, 24)
         verde.TabIndex = 28
         verde.Text = "Verde"
-        verde.UseVisualStyleBackColor = True
+        verde.UseVisualStyleBackColor = False
+        ' 
+        ' fibonacci
+        ' 
+        fibonacci.Location = New Point(296, 441)
+        fibonacci.Name = "fibonacci"
+        fibonacci.Size = New Size(81, 32)
+        fibonacci.TabIndex = 29
+        fibonacci.Text = "Fibonacci"
+        fibonacci.UseVisualStyleBackColor = True
+        ' 
+        ' ListBox1
+        ' 
+        ListBox1.FormattingEnabled = True
+        ListBox1.ItemHeight = 20
+        ListBox1.Location = New Point(3, 414)
+        ListBox1.Name = "ListBox1"
+        ListBox1.Size = New Size(287, 84)
+        ListBox1.TabIndex = 30
         ' 
         ' Form1
         ' 
@@ -369,6 +415,8 @@ Partial Class Form1
         BackColor = SystemColors.ControlDark
         BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), Image)
         ClientSize = New Size(625, 522)
+        Controls.Add(ListBox1)
+        Controls.Add(fibonacci)
         Controls.Add(verde)
         Controls.Add(Button1)
         Controls.Add(rojo)
@@ -443,4 +491,6 @@ Partial Class Form1
     Friend WithEvents rojo As CheckBox
     Friend WithEvents Button1 As Button
     Friend WithEvents verde As CheckBox
+    Friend WithEvents fibonacci As Button
+    Friend WithEvents ListBox1 As ListBox
 End Class
