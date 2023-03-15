@@ -39,6 +39,10 @@ Partial Class Form1
         primo = New TextBox()
         Label2 = New Label()
         primoo = New Button()
+        dia = New TextBox()
+        mes = New TextBox()
+        fecha = New Button()
+        tabla = New Button()
         SuspendLayout()
         ' 
         ' texto1
@@ -186,12 +190,48 @@ Partial Class Form1
         primoo.Text = "Es primo o No"
         primoo.UseVisualStyleBackColor = True
         ' 
+        ' dia
+        ' 
+        dia.Location = New Point(3, 289)
+        dia.Name = "dia"
+        dia.Size = New Size(100, 32)
+        dia.TabIndex = 17
+        dia.Text = "Escribe el día"' 
+        ' mes
+        ' 
+        mes.Location = New Point(109, 289)
+        mes.Name = "mes"
+        mes.Size = New Size(111, 32)
+        mes.TabIndex = 18
+        mes.Text = "Escribe el mes"' 
+        ' fecha
+        ' 
+        fecha.Location = New Point(226, 289)
+        fecha.Name = "fecha"
+        fecha.Size = New Size(75, 32)
+        fecha.TabIndex = 19
+        fecha.Text = "Calcular"
+        fecha.UseVisualStyleBackColor = True
+        ' 
+        ' tabla
+        ' 
+        tabla.Location = New Point(240, 251)
+        tabla.Name = "tabla"
+        tabla.Size = New Size(157, 32)
+        tabla.TabIndex = 20
+        tabla.Text = "Tabla de multiplicar"
+        tabla.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(9F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = SystemColors.AppWorkspace
         ClientSize = New Size(563, 522)
+        Controls.Add(tabla)
+        Controls.Add(fecha)
+        Controls.Add(mes)
+        Controls.Add(dia)
         Controls.Add(primoo)
         Controls.Add(Label2)
         Controls.Add(primo)
@@ -234,4 +274,8 @@ Partial Class Form1
     Friend WithEvents primo As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents primoo As Button
+    Friend WithEvents dia As TextBox
+    Friend WithEvents mes As TextBox
+    Friend WithEvents fecha As Button
+    Friend WithEvents tabla As Button
 End Class

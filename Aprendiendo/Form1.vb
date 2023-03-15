@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.Security.Cryptography
+
+Public Class Form1
     'Para Comentar Muchas lineas de código Ctrl + K +Ctrl + C
     'Para Desomentar Muchas lineas de código Ctrl + K +Ctrl + U
     Private Sub Form1_Load(sender As Object, e As EventArgs)
@@ -143,7 +145,7 @@
 
         suma = num1 + num2
 
-        MsgBox(suma)
+        MsgBox("La suma de los números es: " & suma)
 
     End Sub
 
@@ -221,5 +223,56 @@
         Else
             MsgBox("Es un número primo")
         End If
+    End Sub
+
+    Private Sub fecha_Click(sender As Object, e As EventArgs) Handles fecha.Click
+
+        Dim Ndia, Nmes, DDA As Integer
+        Ndia = dia.Text
+        Nmes = mes.Text
+
+        If Ndia >= 1 And Ndia <= 31 And Nmes >= 1 And Nmes <= 12 Then
+            Select Case Nmes
+                Case 1
+                    DDA = Ndia '[DDA es día del año]
+                Case 2
+                    DDA = Ndia + 31
+                Case 3
+                    DDA = Ndia + 59
+                Case 4
+                    DDA = Ndia + 90
+                Case 5
+                    DDA = Ndia + 120
+                Case 6
+                    DDA = Ndia + 151
+                Case 7
+                    DDA = Ndia + 181
+                Case 8
+                    DDA = Ndia + 212
+                Case 9
+                    DDA = Ndia + 243
+                Case 10
+                    DDA = Ndia + 273
+                Case 11
+                    DDA = Ndia + 304
+                Case 12
+                    DDA = Ndia + 334
+            End Select
+            MsgBox("El " & Ndia & " del " & Nmes & " es el día " & DDA & " del año")
+        Else
+            MsgBox("Los datos que insertaste no son validos")
+        End If
+    End Sub
+
+    Private Sub tabla_Click(sender As Object, e As EventArgs) Handles tabla.Click
+
+        Dim multiplica As Integer
+
+        multiplica = primo.Text
+
+        'Creamos un ciclo For en el que el contador iniciara desde 1 hasta 10
+        For i = 1 To 10
+            MsgBox(multiplica & " * " & i & " = " & multiplica * i & vbCrLf)
+        Next
     End Sub
 End Class
