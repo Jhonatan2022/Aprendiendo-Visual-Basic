@@ -140,18 +140,59 @@ Public Class Form1
             Next
         Next
 
+
+
         'CICLOS DO - WHILE
         Dim doo As Integer = 0
 
+        'Dterminamos que la variable tenfra 5 posiciones
+        Dim eje(5) As Integer
+
+        'Ciclo Do
         Do
-            MsgBox("Ciclo Do: " + i.ToString)
+            MsgBox("Ciclo Do: " + doo.ToString)
             'Creamos la incrementación en ña variable i
 
-            i += 1
+            'Definimos el incrementador
+            doo += 1
 
             'Determinamos que el ciclo se ejecute hasta que i sea menor que 2
-        Loop While i < 2
+        Loop While doo < 2
 
+        'Reiniciamos el valor de nuestra variable
+        doo = 0
+
+        'Ciclo Do While
+        Do While doo < 3
+            MsgBox("Ciclo do while: " + doo.ToString)
+
+            'Definimos el incrementador
+            doo = doo + 1
+        Loop
+
+        i = 0
+
+        'Ciclo While
+        While doo < 3
+            MsgBox("Ciclo while: " + doo.ToString)
+
+            'Definimos el incrementador
+            doo += 1
+        End While
+
+        Do While doo < 5
+            eje(doo) = doo
+            doo += 1
+        Loop
+
+        doo = 0
+
+        While doo < 5
+            MsgBox("Arreglo ( " + doo.ToString + " ) = " + eje(doo).ToString)
+
+            'Si quitamos el incremento, entraremos en un ciclo infinito
+            doo += 1
+        End While
     End Sub
 
     Private Sub nombre_TextChanged(sender As Object, e As EventArgs)
@@ -427,13 +468,33 @@ Public Class Form1
 
         'Definimos el ciclo for hasta que cantidad queremos que vaya
         For i = 1 To 12
+
             n3 = n1 + n2
+
             'Agregamos a la lista los valores obtenidos de la ecuación
             ListBox1.Items.Add("Posición " & i & " en Fibonacci es: " & n1)
+
             n1 = n2
             n2 = n3
         Next
 
+    End Sub
+
+    Private Sub volumen_Click(sender As Object, e As EventArgs) Handles volumen.Click
+        'Calculando el columen de un cilindro
+        'Definimos la constante (Es un valor que una vez definido no puede cambiar) de pi
+        Const pi As Single = 3.141592654
+        'Definimos la variables que necesitamos
+        Dim V, D, A As Single
+
+        'Capturamos los valores que ingresara el usuario
+        'Obtenemos el valor del elementos con val
+        D = Val(diametro.Text) / 2
+        A = Val(altura.Text)
+        V = pi * (D ^ 2) * A
+
+        'Mostramos el resultado por una caja de texto
+        MsgBox("El volumen del cilindro es: " & V & "Metros cúbicos")
 
     End Sub
 End Class
