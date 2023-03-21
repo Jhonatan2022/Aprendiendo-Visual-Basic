@@ -33,10 +33,11 @@ Partial Class Form1
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AccederToolStripMenuItem, Me.CerrarToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(506, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(506, 33)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -44,20 +45,21 @@ Partial Class Form1
         '
         Me.AccederToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FromulariosToolStripMenuItem, Me.DimeHolaToolStripMenuItem})
         Me.AccederToolStripMenuItem.Name = "AccederToolStripMenuItem"
-        Me.AccederToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.AccederToolStripMenuItem.Size = New System.Drawing.Size(87, 29)
         Me.AccederToolStripMenuItem.Text = "Acceder"
         '
         'FromulariosToolStripMenuItem
         '
         Me.FromulariosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Formulario2ToolStripMenuItem})
         Me.FromulariosToolStripMenuItem.Name = "FromulariosToolStripMenuItem"
-        Me.FromulariosToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FromulariosToolStripMenuItem.Size = New System.Drawing.Size(182, 30)
         Me.FromulariosToolStripMenuItem.Text = "Fromularios"
         '
         'Formulario2ToolStripMenuItem
         '
+        Me.Formulario2ToolStripMenuItem.Image = Global.aprendo2.My.Resources.Resources.Linux1
         Me.Formulario2ToolStripMenuItem.Name = "Formulario2ToolStripMenuItem"
-        Me.Formulario2ToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.Formulario2ToolStripMenuItem.Size = New System.Drawing.Size(184, 30)
         Me.Formulario2ToolStripMenuItem.Text = "Formulario2"
         '
         'DimeHolaToolStripMenuItem
