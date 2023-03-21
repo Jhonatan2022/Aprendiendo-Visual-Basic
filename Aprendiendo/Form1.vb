@@ -403,6 +403,8 @@ Public Class Form1
 
         ElseIf (dividir.Checked = True) Then
             resulta = num1 / num2
+        Else
+            MsgBox("No ha seleccionado ninguna opción")
         End If
 
         MsgBox("El resultado de la operación es: " & resulta)
@@ -456,7 +458,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub fibonacci_Click(sender As Object, e As EventArgs) Handles fibonacci.Click
+    Private Sub fibonacci_Click(sender As Object, e As EventArgs)
 
         'Serie de fibonacci
         Dim n1, n2, n3, i As Single
@@ -480,7 +482,7 @@ Public Class Form1
 
     End Sub
 
-    Private Sub volumen_Click(sender As Object, e As EventArgs) Handles volumen.Click
+    Private Sub volumen_Click(sender As Object, e As EventArgs)
         'Calculando el columen de un cilindro
         'Definimos la constante (Es un valor que una vez definido no puede cambiar) de pi
         Const pi As Single = 3.141592654
@@ -496,5 +498,44 @@ Public Class Form1
         'Mostramos el resultado por una caja de texto
         MsgBox("El volumen del cilindro es: " & V & "Metros cúbicos")
 
+    End Sub
+
+    Private Sub ejecutar_Click(sender As Object, e As EventArgs)
+
+        'Programando eventos con swicth 
+        'Definimos las variables
+        Dim op As String
+        Dim n1, n2 As Integer
+        Dim operacion As Double
+
+        n1 = n.Text
+        n2 = n.Text
+
+        If sumad.Checked = True Then
+            op = "Suma2"
+        End If
+
+        If restad.Checked = True Then
+            op = "Restar2"
+        End If
+
+
+        Select Case op
+
+            Case "Suma2"
+                operacion = n1 + 2
+
+            Case "Restar2"
+                operacion = n2 - 2
+
+            Case Else
+                MsgBox("No ha seleccionado ninguna opción.")
+
+                'Pedimos que salga de la función para que no nos imprima el siguiente mensaje
+                Exit Sub
+
+        End Select
+
+        MsgBox("El resultado es: " + operacion.ToString)
     End Sub
 End Class
