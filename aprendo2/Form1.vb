@@ -2,14 +2,13 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         'La función tiene que tener el mismo valor de envio
-        Dim var As String
+        'Dim var As String
 
-        var = "variable sin cambiar"
+        'var = "variable sin cambiar"
 
         'Elegimos que variable vamos a enviar
-        referencia(var)
-
-        MsgBox(var)
+        'referencia(var)
+        'MsgBox(var)
 
     End Sub
 
@@ -50,43 +49,59 @@
 
     End Sub
 
-
     'Creación de variables y parametros
     Sub hola()
-        MsgBox("Hola, soy un función")
+
+        'MsgBox("Hola, soy un función")
     End Sub
 
     Function retornarhola()
 
         'Creamos una variable
-        Dim hol As String
+        'Dim hol As String
 
-        hol = "Hola soy un procedimiento"
-        Return hol
+        'hol = "Hola soy un procedimiento"
+        'Return hol
 
     End Function
 
     'FUNCIONES CON PARAMETROS
     Private Sub parametro(ByVal variable As String)
 
-        MsgBox(variable)
+        'MsgBox(variable)
 
         'Modificamos la variable crada
-        variable = "información cambiada"
+        'variable = "información cambiada"
 
-        MsgBox(variable)
+        'MsgBox(variable)
     End Sub
 
     'Función de referencia
     Private Sub referencia(ByRef variable As String)
 
-        MsgBox(variable)
+        'MsgBox(variable)
 
         'Modificamos la variable crada
-        variable = "información cambiada"
+        'variable = "información cambiada"
 
-        MsgBox(variable)
+        'MsgBox(variable)
 
     End Sub
 
+
+    'PROGRAMANDO EVENTOS DE CLICK PARA OTROS COMPONENENTES
+    Private Sub CheckBox1_Click(sender As Object, e As EventArgs) Handles CheckBox1.Click
+
+        MsgBox("Has dado click en el checkbox")
+    End Sub
+
+    Private Sub RadioButton1_Click(sender As Object, e As EventArgs) Handles RadioButton1.Click
+
+        MsgBox("Has da click en el radio buttom")
+    End Sub
+
+    Private Sub TextBox6_Click(sender As Object, e As EventArgs) Handles TextBox6.Click
+
+        MsgBox("Has dado click en el textbox")
+    End Sub
 End Class
