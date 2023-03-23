@@ -1,6 +1,15 @@
 ﻿Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        'La función tiene que tener el mismo valor de envio
+        Dim var As String
+
+        var = "variable sin cambiar"
+
+        'Elegimos que variable vamos a enviar
+        referencia(var)
+
+        MsgBox(var)
 
     End Sub
 
@@ -23,4 +32,61 @@
         Me.Close()
 
     End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+
+        'Llamando a la función que creamos
+        hola()
+
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+
+        'Debemos tener otra variable para que nos reciva el valor del procedimiento
+        Dim holis As String
+
+        holis = retornarhola()
+        MsgBox(holis)
+
+    End Sub
+
+
+    'Creación de variables y parametros
+    Sub hola()
+        MsgBox("Hola, soy un función")
+    End Sub
+
+    Function retornarhola()
+
+        'Creamos una variable
+        Dim hol As String
+
+        hol = "Hola soy un procedimiento"
+        Return hol
+
+    End Function
+
+    'FUNCIONES CON PARAMETROS
+    Private Sub parametro(ByVal variable As String)
+
+        MsgBox(variable)
+
+        'Modificamos la variable crada
+        variable = "información cambiada"
+
+        MsgBox(variable)
+    End Sub
+
+    'Función de referencia
+    Private Sub referencia(ByRef variable As String)
+
+        MsgBox(variable)
+
+        'Modificamos la variable crada
+        variable = "información cambiada"
+
+        MsgBox(variable)
+
+    End Sub
+
 End Class
