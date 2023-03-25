@@ -53,6 +53,8 @@ Partial Class Form1
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -320,9 +322,9 @@ Partial Class Form1
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Location = New System.Drawing.Point(253, 140)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(81, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(66, 17)
         Me.CheckBox1.TabIndex = 4
-        Me.CheckBox1.Text = "CheckBox1"
+        Me.CheckBox1.Text = "On Click"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'RadioButton1
@@ -330,10 +332,10 @@ Partial Class Form1
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Location = New System.Drawing.Point(253, 164)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(90, 17)
+        Me.RadioButton1.Size = New System.Drawing.Size(65, 17)
         Me.RadioButton1.TabIndex = 5
         Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "RadioButton1"
+        Me.RadioButton1.Text = "On Click"
         Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'TextBox6
@@ -342,6 +344,23 @@ Partial Class Form1
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(100, 20)
         Me.TextBox6.TabIndex = 6
+        Me.TextBox6.Text = "OnClick"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(252, 214)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox7.TabIndex = 7
+        Me.TextBox7.Text = "KEYPRESS"
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(252, 240)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox8.TabIndex = 8
+        Me.TextBox8.Text = "Solo Números"
         '
         'Form1
         '
@@ -349,6 +368,8 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(506, 450)
+        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.RadioButton1)
         Me.Controls.Add(Me.CheckBox1)
@@ -404,4 +425,6 @@ Partial Class Form1
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox8 As TextBox
 End Class
