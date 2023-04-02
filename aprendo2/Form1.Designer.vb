@@ -55,6 +55,10 @@ Partial Class Form1
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Button9 = New System.Windows.Forms.Button()
+        Me.Genero = New System.Windows.Forms.ComboBox()
+        Me.Button10 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -301,7 +305,7 @@ Partial Class Form1
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(252, 81)
+        Me.Button7.Location = New System.Drawing.Point(252, 60)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(75, 23)
         Me.Button7.TabIndex = 2
@@ -310,7 +314,7 @@ Partial Class Form1
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(252, 110)
+        Me.Button8.Location = New System.Drawing.Point(252, 89)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(75, 23)
         Me.Button8.TabIndex = 3
@@ -320,7 +324,7 @@ Partial Class Form1
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(253, 140)
+        Me.CheckBox1.Location = New System.Drawing.Point(253, 119)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(66, 17)
         Me.CheckBox1.TabIndex = 4
@@ -330,7 +334,7 @@ Partial Class Form1
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(253, 164)
+        Me.RadioButton1.Location = New System.Drawing.Point(253, 143)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(65, 17)
         Me.RadioButton1.TabIndex = 5
@@ -340,7 +344,7 @@ Partial Class Form1
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(253, 188)
+        Me.TextBox6.Location = New System.Drawing.Point(253, 167)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(100, 20)
         Me.TextBox6.TabIndex = 6
@@ -348,7 +352,7 @@ Partial Class Form1
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(252, 214)
+        Me.TextBox7.Location = New System.Drawing.Point(252, 193)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(100, 20)
         Me.TextBox7.TabIndex = 7
@@ -356,11 +360,46 @@ Partial Class Form1
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(252, 240)
+        Me.TextBox8.Location = New System.Drawing.Point(252, 219)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(100, 20)
         Me.TextBox8.TabIndex = 8
         Me.TextBox8.Text = "Solo Números"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(252, 245)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox9.TabIndex = 9
+        Me.TextBox9.Text = "Solo letras"
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(333, 60)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(75, 23)
+        Me.Button9.TabIndex = 10
+        Me.Button9.Text = "Comparo texto"
+        Me.Button9.UseVisualStyleBackColor = True
+        '
+        'Genero
+        '
+        Me.Genero.FormattingEnabled = True
+        Me.Genero.Location = New System.Drawing.Point(0, 285)
+        Me.Genero.Name = "Genero"
+        Me.Genero.Size = New System.Drawing.Size(121, 21)
+        Me.Genero.TabIndex = 11
+        Me.Genero.Text = "Genero"
+        '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(127, 285)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(75, 23)
+        Me.Button10.TabIndex = 12
+        Me.Button10.Text = "Ver código"
+        Me.Button10.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -368,6 +407,10 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(506, 450)
+        Me.Controls.Add(Me.Button10)
+        Me.Controls.Add(Me.Genero)
+        Me.Controls.Add(Me.Button9)
+        Me.Controls.Add(Me.TextBox9)
         Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.TextBox6)
@@ -427,4 +470,8 @@ Partial Class Form1
     Friend WithEvents TextBox6 As TextBox
     Friend WithEvents TextBox7 As TextBox
     Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents Button9 As Button
+    Friend WithEvents Genero As ComboBox
+    Friend WithEvents Button10 As Button
 End Class
